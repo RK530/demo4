@@ -114,7 +114,7 @@
                  <div class="row " >
                   <div class="col-md-10">
                     
-               
+                    <a class="btn  btn-info btn-lg " style="float:right;"   href="{{ route('user.index') }}">Back</a>
                   </div>
                   @if(isset($user))
                   <a href="" class="btn  btn-warning btn-lg " style="float:right;margin-right:1%;"  >Clear</a>
