@@ -74,8 +74,23 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
-                        <a href="#endpoints-GETapi-user">GET api/user</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-create">
+                        <a href="#endpoints-GETapi-create">Show the form for creating a new resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi--id-">
+                        <a href="#endpoints-GETapi--id-">Display the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi--api--edit">
+                        <a href="#endpoints-GETapi--api--edit">Show the form for editing the specified resource.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-PUTapi--id-">
+                        <a href="#endpoints-PUTapi--id-">Update the specified resource in storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-DELETEapi--id-">
+                        <a href="#endpoints-DELETEapi--id-">Remove the specified resource from storage.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-result--date--">
+                        <a href="#endpoints-GETapi-v1-result--date--">Display a listing of the Api 4D Result.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -89,7 +104,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: June 30 2022</li>
+        <li>Last updated: July 4 2022</li>
     </ul>
 </div>
 
@@ -112,27 +127,27 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-            <h2 id="endpoints-GETapi-user">GET api/user</h2>
+            <h2 id="endpoints-GETapi-create">Show the form for creating a new resource.</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-user">
+<span id="example-requests-GETapi-create">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user" \
+    --get "http://localhost/api/create" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "http://localhost/api/create"
 );
 
 const headers = {
@@ -147,9 +162,495 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-user">
+<span id="example-responses-GETapi-create">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+access-control-allow-origin: *
+set-cookie: XSRF-TOKEN=eyJpdiI6Ink5ZjMzOHhxVGN4SE80N1NzMjlMY0E9PSIsInZhbHVlIjoiVWs3R0lYOW9ORE1RT3U4TytwOE5Fd2EwSExuRjZrWG8wVWE3QTBBb0k2cnJXdi8zSXhjL2ZWeEZEa1ZIaVJRMTErR1VTVURsUUt0UUUzcW8ySTU2SzhzZXFkYi96WlZvSndqbGthb2lkMlM0VHk4V0pqbXg1dVRvZzE0TVM0UEsiLCJtYWMiOiI3M2VmZWQzM2Q0N2VlMzFiMDQyMTRkMzk5NzliZGEyNjhlYzdkYzE4OWVkMTVjZDM1ZjRjZTI3MTY3MTg3OGE0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6Ii9ISTNEZE41SlpTZWlJUUUzUXlpZ0E9PSIsInZhbHVlIjoiV3ZONlo4a2x0YmY2YUJGd2ZpMDBXWFh3RzBRQ1M5bmFza1dDZnRFaE1JUGdFQTlIM2s0OUxleTd3Zkt5bTdtSWFyZHQyM2lhOTV3S1BoaDJlOXA5aFFiK2lhbUZPQy95aDFRQTRLVTRVQi96aDdpajhSU0VQMGFIdFQ0MXQvWGoiLCJtYWMiOiIxZmFjZGM4MmViMTVlM2IwZWIxNmI5MzVmMjg0NWY2NTJkZjZlNmY1ZjlkZmIwYjk1ZWEwNTQ2MGZmNDM1ZTY0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-create" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-create"></code></pre>
+</span>
+<span id="execution-error-GETapi-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-create"></code></pre>
+</span>
+<form id="form-GETapi-create" data-method="GET"
+      data-path="api/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-create"
+                    onclick="tryItOut('GETapi-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-create"
+                    onclick="cancelTryOut('GETapi-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/create</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi--id-">Display the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/eius" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/eius"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+access-control-allow-origin: *
+set-cookie: XSRF-TOKEN=eyJpdiI6ImJCRnFCS01pYlYyaDBrdDNJT2JUNGc9PSIsInZhbHVlIjoia0pTS1hzSHFKRCtzSHZ6aS9sSU5kSnc2OFgwOTdWN3pxZ2FIYU9RdS9adkQ4U3pQd01uRnR4bEhKa3RZeEM0TS94Qm9rOVdYQTJMQzBOU0ZRV2hNSWI2YndvZXRLZG5IZkVrcDd0cW43ZkpmaXdBMGYxVkxsN0FNRnZteVppREMiLCJtYWMiOiI1MjgyODY1NDhjZmFmMTcwZGExNTdkMmMzZjUwNThhM2U5MWQxOGM3ZTkyMTBiODliZGYwOGQzMWQ4NThmNzQ2IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6IlhuUXkrOVVQYWdGSGNRRFJZUmNSenc9PSIsInZhbHVlIjoiVjJ3SFA5UDJCMy9jVGhBaGpNSVQwT2VDRkw3UXZUT1ZOZVdNQmo4WnllMkY1TVA4cUY3dFgwelRxQThVV2l1dnp3V3ZqZ3ZCNi9NQ0EyYVJmYXg2bG01dnA3MC9renB4YnJSVXlJYmtYcGNXc04vWlBvMzk3Wll2NmVZVWJwVjIiLCJtYWMiOiI1ZDJjMTNkZjRhOGVlZWVlMTljMDc1ZDQxOTkzODA0Zjk3MjYwOTNmOTQyYzdjY2RkYmViNDZhMjY0ODk2NGViIiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi--id-"></code></pre>
+</span>
+<form id="form-GETapi--id-" data-method="GET"
+      data-path="api/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi--id-"
+                    onclick="tryItOut('GETapi--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi--id-"
+                    onclick="cancelTryOut('GETapi--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi--id-"
+               value="eius"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the api.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi--api--edit">Show the form for editing the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi--api--edit">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/quos/edit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/quos/edit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi--api--edit">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+access-control-allow-origin: *
+set-cookie: XSRF-TOKEN=eyJpdiI6IlZZZ3E3LzQ3bFNHT2V5SnAyU0lGeHc9PSIsInZhbHVlIjoiQ2hTdjAvMjBVTTF6NVdsNytNNFBhdjJ3Qkp5VEtHZElCcVNRK2M2VUJlVDUzMTBWYmV2cGxHVll4TVlGSm1zTys2N2pJalJ5OTZxeUV3VGswM080ait2RnpHK00rdzJFbXVPZlFLN2p0UFBXNUh6VmxrdG9nV2psNmczRnZpUysiLCJtYWMiOiIwZmMyOWU4NjMzZjIyMTUwMmY0MDc0NmRiM2I0OTMxOTk5MTU5NDZiOTZiZGVjZGE3N2IzODhiZjYyMzE5NjE0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6IkxTZTY4WnR5dTRRN0hQaE1UZEhXS2c9PSIsInZhbHVlIjoianlDYlVoZlZ1RGFDSGN2bGh6b3VXS3dqbitwanhYa0ozLzlIUlVKMGxUd1Y1ZFVmU1hvVTRhbGdjUk40NThZem9MeW1USDUzL3dxRCtVM0RzTWJmUURRcXc3UHJ2eXg4OEdFMk9HMWJTSTRYOFlISzNKTDQyR21GT3JKMHczbXAiLCJtYWMiOiIxZTNjNjY4ZWM4OTkxMzQyNWY1NzRlNTdkMzc5MjUxOWJiOTlkZGFlODUwZTI2YTgwNDJjM2NmOTdhMjI3MjZjIiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi--api--edit" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi--api--edit"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi--api--edit"></code></pre>
+</span>
+<span id="execution-error-GETapi--api--edit" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi--api--edit"></code></pre>
+</span>
+<form id="form-GETapi--api--edit" data-method="GET"
+      data-path="api/{api}/edit"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi--api--edit', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi--api--edit"
+                    onclick="tryItOut('GETapi--api--edit');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi--api--edit"
+                    onclick="cancelTryOut('GETapi--api--edit');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi--api--edit" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/{api}/edit</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>api</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="api"
+               data-endpoint="GETapi--api--edit"
+               value="quos"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-PUTapi--id-">Update the specified resource in storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost/api/odio" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/odio"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi--id-">
+</span>
+<span id="execution-results-PUTapi--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi--id-"></code></pre>
+</span>
+<form id="form-PUTapi--id-" data-method="PUT"
+      data-path="api/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi--id-"
+                    onclick="tryItOut('PUTapi--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi--id-"
+                    onclick="cancelTryOut('PUTapi--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="PUTapi--id-"
+               value="odio"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the api.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-DELETEapi--id-">Remove the specified resource from storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/qui" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/qui"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi--id-">
+</span>
+<span id="execution-results-DELETEapi--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi--id-"></code></pre>
+</span>
+<form id="form-DELETEapi--id-" data-method="DELETE"
+      data-path="api/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi--id-"
+                    onclick="tryItOut('DELETEapi--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi--id-"
+                    onclick="cancelTryOut('DELETEapi--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="DELETEapi--id-"
+               value="qui"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the api.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1-result--date--">Display a listing of the Api 4D Result.</h2>
+
+<p>
+</p>
+
+<p>Get a list of 4D Result Site.</p>
+
+<span id="example-requests-GETapi-v1-result--date--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/v1/result/today" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/v1/result/today"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-result--date--">
+            <blockquote>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -157,54 +658,471 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
+<code class="language-json">[
+    {
+        &quot;type&quot;: &quot;H&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;9297&quot;,
+            &quot;n1_pos&quot;: &quot;B&quot;,
+            &quot;n2&quot;: &quot;0618&quot;,
+            &quot;n2_pos&quot;: &quot;G&quot;,
+            &quot;n3&quot;: &quot;4820&quot;,
+            &quot;n3_pos&quot;: &quot;K&quot;,
+            &quot;n11&quot;: &quot;297&quot;,
+            &quot;n12&quot;: &quot;618&quot;,
+            &quot;n13&quot;: &quot;820&quot;,
+            &quot;s1&quot;: &quot;1704&quot;,
+            &quot;s2&quot;: &quot;----&quot;,
+            &quot;s3&quot;: &quot;9559&quot;,
+            &quot;s4&quot;: &quot;1408&quot;,
+            &quot;s5&quot;: &quot;2871&quot;,
+            &quot;s6&quot;: &quot;6941&quot;,
+            &quot;s7&quot;: &quot;----&quot;,
+            &quot;s8&quot;: &quot;7487&quot;,
+            &quot;s9&quot;: &quot;6410&quot;,
+            &quot;s10&quot;: &quot;8097&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;2520&quot;,
+            &quot;s13&quot;: &quot;9017&quot;,
+            &quot;c1&quot;: &quot;3148&quot;,
+            &quot;c2&quot;: &quot;----&quot;,
+            &quot;c3&quot;: &quot;9559&quot;,
+            &quot;c4&quot;: &quot;1408&quot;,
+            &quot;c5&quot;: &quot;2871&quot;,
+            &quot;c6&quot;: &quot;6941&quot;,
+            &quot;c7&quot;: &quot;----&quot;,
+            &quot;c8&quot;: &quot;7487&quot;,
+            &quot;c9&quot;: &quot;6410&quot;,
+            &quot;c10&quot;: &quot;8097&quot;,
+            &quot;dd&quot;: &quot;2022-06-30&quot;,
+            &quot;dn&quot;: &quot;1442&quot;,
+            &quot;day&quot;: &quot;Thu&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;https://www.youtube.com/embed/nNkofNyn7wQ?rel=0&amp;hd=1&quot;,
+            &quot;jackpotAmount&quot;: &quot;678,486.00&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;CS&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;6714&quot;,
+            &quot;n1_pos&quot;: &quot;&quot;,
+            &quot;n2&quot;: &quot;2364&quot;,
+            &quot;n2_pos&quot;: &quot;&quot;,
+            &quot;n3&quot;: &quot;3525&quot;,
+            &quot;n3_pos&quot;: &quot;&quot;,
+            &quot;n11&quot;: &quot;714&quot;,
+            &quot;n12&quot;: &quot;364&quot;,
+            &quot;n13&quot;: &quot;525&quot;,
+            &quot;s1&quot;: &quot;9652&quot;,
+            &quot;s2&quot;: &quot;0745&quot;,
+            &quot;s3&quot;: &quot;9554&quot;,
+            &quot;s4&quot;: &quot;2875&quot;,
+            &quot;s5&quot;: &quot;8063&quot;,
+            &quot;s6&quot;: &quot;3731&quot;,
+            &quot;s7&quot;: &quot;2455&quot;,
+            &quot;s8&quot;: &quot;2117&quot;,
+            &quot;s9&quot;: &quot;2685&quot;,
+            &quot;s10&quot;: &quot;6241&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;----&quot;,
+            &quot;s13&quot;: &quot;----&quot;,
+            &quot;c1&quot;: &quot;2388&quot;,
+            &quot;c2&quot;: &quot;0745&quot;,
+            &quot;c3&quot;: &quot;9554&quot;,
+            &quot;c4&quot;: &quot;2875&quot;,
+            &quot;c5&quot;: &quot;8063&quot;,
+            &quot;c6&quot;: &quot;3731&quot;,
+            &quot;c7&quot;: &quot;2455&quot;,
+            &quot;c8&quot;: &quot;2117&quot;,
+            &quot;c9&quot;: &quot;2685&quot;,
+            &quot;c10&quot;: &quot;6241&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;4640/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;EE&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;9118&quot;,
+            &quot;n1_pos&quot;: &quot;&quot;,
+            &quot;n2&quot;: &quot;0444&quot;,
+            &quot;n2_pos&quot;: &quot;&quot;,
+            &quot;n3&quot;: &quot;0982&quot;,
+            &quot;n3_pos&quot;: &quot;&quot;,
+            &quot;n11&quot;: &quot;202&quot;,
+            &quot;n12&quot;: &quot;639&quot;,
+            &quot;n13&quot;: &quot;928&quot;,
+            &quot;s1&quot;: &quot;3582&quot;,
+            &quot;s2&quot;: &quot;1752&quot;,
+            &quot;s3&quot;: &quot;----&quot;,
+            &quot;s4&quot;: &quot;8635&quot;,
+            &quot;s5&quot;: &quot;----&quot;,
+            &quot;s6&quot;: &quot;5670&quot;,
+            &quot;s7&quot;: &quot;2099&quot;,
+            &quot;s8&quot;: &quot;5703&quot;,
+            &quot;s9&quot;: &quot;9336&quot;,
+            &quot;s10&quot;: &quot;5883&quot;,
+            &quot;s11&quot;: &quot;3015&quot;,
+            &quot;s12&quot;: &quot;0847&quot;,
+            &quot;s13&quot;: &quot;----&quot;,
+            &quot;c1&quot;: &quot;9511&quot;,
+            &quot;c2&quot;: &quot;1752&quot;,
+            &quot;c3&quot;: &quot;----&quot;,
+            &quot;c4&quot;: &quot;8635&quot;,
+            &quot;c5&quot;: &quot;----&quot;,
+            &quot;c6&quot;: &quot;5670&quot;,
+            &quot;c7&quot;: &quot;2099&quot;,
+            &quot;c8&quot;: &quot;5703&quot;,
+            &quot;c9&quot;: &quot;9336&quot;,
+            &quot;c10&quot;: &quot;5883&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;3547/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;GD&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;2633&quot;,
+            &quot;n1_pos&quot;: &quot;L&quot;,
+            &quot;n2&quot;: &quot;1832&quot;,
+            &quot;n2_pos&quot;: &quot;B&quot;,
+            &quot;n3&quot;: &quot;2433&quot;,
+            &quot;n3_pos&quot;: &quot;K&quot;,
+            &quot;n11&quot;: &quot;&quot;,
+            &quot;n12&quot;: &quot;&quot;,
+            &quot;n13&quot;: &quot;&quot;,
+            &quot;s1&quot;: &quot;1874&quot;,
+            &quot;s2&quot;: &quot;----&quot;,
+            &quot;s3&quot;: &quot;1434&quot;,
+            &quot;s4&quot;: &quot;0431&quot;,
+            &quot;s5&quot;: &quot;3790&quot;,
+            &quot;s6&quot;: &quot;8477&quot;,
+            &quot;s7&quot;: &quot;5772&quot;,
+            &quot;s8&quot;: &quot;5585&quot;,
+            &quot;s9&quot;: &quot;8212&quot;,
+            &quot;s10&quot;: &quot;8079&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;----&quot;,
+            &quot;s13&quot;: &quot;4911&quot;,
+            &quot;c1&quot;: &quot;3678&quot;,
+            &quot;c2&quot;: &quot;----&quot;,
+            &quot;c3&quot;: &quot;1434&quot;,
+            &quot;c4&quot;: &quot;0431&quot;,
+            &quot;c5&quot;: &quot;3790&quot;,
+            &quot;c6&quot;: &quot;8477&quot;,
+            &quot;c7&quot;: &quot;5772&quot;,
+            &quot;c8&quot;: &quot;5585&quot;,
+            &quot;c9&quot;: &quot;8212&quot;,
+            &quot;c10&quot;: &quot;8079&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;2021/2022&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;M&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;4962&quot;,
+            &quot;n1_pos&quot;: &quot;F&quot;,
+            &quot;n2&quot;: &quot;5938&quot;,
+            &quot;n2_pos&quot;: &quot;A&quot;,
+            &quot;n3&quot;: &quot;3800&quot;,
+            &quot;n3_pos&quot;: &quot;M&quot;,
+            &quot;n11&quot;: &quot;&quot;,
+            &quot;n12&quot;: &quot;&quot;,
+            &quot;n13&quot;: &quot;&quot;,
+            &quot;s1&quot;: &quot;----&quot;,
+            &quot;s2&quot;: &quot;6664&quot;,
+            &quot;s3&quot;: &quot;7746&quot;,
+            &quot;s4&quot;: &quot;7275&quot;,
+            &quot;s5&quot;: &quot;8637&quot;,
+            &quot;s6&quot;: &quot;----&quot;,
+            &quot;s7&quot;: &quot;2541&quot;,
+            &quot;s8&quot;: &quot;6872&quot;,
+            &quot;s9&quot;: &quot;6764&quot;,
+            &quot;s10&quot;: &quot;5218&quot;,
+            &quot;s11&quot;: &quot;8635&quot;,
+            &quot;s12&quot;: &quot;4145&quot;,
+            &quot;s13&quot;: &quot;----&quot;,
+            &quot;c1&quot;: &quot;6903&quot;,
+            &quot;c2&quot;: &quot;6664&quot;,
+            &quot;c3&quot;: &quot;7746&quot;,
+            &quot;c4&quot;: &quot;7275&quot;,
+            &quot;c5&quot;: &quot;8637&quot;,
+            &quot;c6&quot;: &quot;----&quot;,
+            &quot;c7&quot;: &quot;2541&quot;,
+            &quot;c8&quot;: &quot;6872&quot;,
+            &quot;c9&quot;: &quot;6764&quot;,
+            &quot;c10&quot;: &quot;5218&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;717/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;PMP&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;2365&quot;,
+            &quot;n1_pos&quot;: &quot;&quot;,
+            &quot;n2&quot;: &quot;3361&quot;,
+            &quot;n2_pos&quot;: &quot;&quot;,
+            &quot;n3&quot;: &quot;4652&quot;,
+            &quot;n3_pos&quot;: &quot;&quot;,
+            &quot;n11&quot;: &quot;365&quot;,
+            &quot;n12&quot;: &quot;361&quot;,
+            &quot;n13&quot;: &quot;652&quot;,
+            &quot;s1&quot;: &quot;4699&quot;,
+            &quot;s2&quot;: &quot;7236&quot;,
+            &quot;s3&quot;: &quot;6686&quot;,
+            &quot;s4&quot;: &quot;3239&quot;,
+            &quot;s5&quot;: &quot;6269&quot;,
+            &quot;s6&quot;: &quot;4674&quot;,
+            &quot;s7&quot;: &quot;1450&quot;,
+            &quot;s8&quot;: &quot;3057&quot;,
+            &quot;s9&quot;: &quot;6371&quot;,
+            &quot;s10&quot;: &quot;1358&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;----&quot;,
+            &quot;s13&quot;: &quot;----&quot;,
+            &quot;c1&quot;: &quot;0497&quot;,
+            &quot;c2&quot;: &quot;7236&quot;,
+            &quot;c3&quot;: &quot;6686&quot;,
+            &quot;c4&quot;: &quot;3239&quot;,
+            &quot;c5&quot;: &quot;6269&quot;,
+            &quot;c6&quot;: &quot;4674&quot;,
+            &quot;c7&quot;: &quot;1450&quot;,
+            &quot;c8&quot;: &quot;3057&quot;,
+            &quot;c9&quot;: &quot;6371&quot;,
+            &quot;c10&quot;: &quot;1358&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;5428/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;SG&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;1614&quot;,
+            &quot;n1_pos&quot;: &quot;&quot;,
+            &quot;n2&quot;: &quot;6467&quot;,
+            &quot;n2_pos&quot;: &quot;&quot;,
+            &quot;n3&quot;: &quot;9112&quot;,
+            &quot;n3_pos&quot;: &quot;&quot;,
+            &quot;n11&quot;: &quot;&quot;,
+            &quot;n12&quot;: &quot;&quot;,
+            &quot;n13&quot;: &quot;&quot;,
+            &quot;s1&quot;: &quot;1358&quot;,
+            &quot;s2&quot;: &quot;1368&quot;,
+            &quot;s3&quot;: &quot;1536&quot;,
+            &quot;s4&quot;: &quot;1845&quot;,
+            &quot;s5&quot;: &quot;1868&quot;,
+            &quot;s6&quot;: &quot;2073&quot;,
+            &quot;s7&quot;: &quot;2927&quot;,
+            &quot;s8&quot;: &quot;3969&quot;,
+            &quot;s9&quot;: &quot;7646&quot;,
+            &quot;s10&quot;: &quot;7930&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;----&quot;,
+            &quot;s13&quot;: &quot;----&quot;,
+            &quot;c1&quot;: &quot;0423&quot;,
+            &quot;c2&quot;: &quot;1368&quot;,
+            &quot;c3&quot;: &quot;1536&quot;,
+            &quot;c4&quot;: &quot;1845&quot;,
+            &quot;c5&quot;: &quot;1868&quot;,
+            &quot;c6&quot;: &quot;2073&quot;,
+            &quot;c7&quot;: &quot;2927&quot;,
+            &quot;c8&quot;: &quot;3969&quot;,
+            &quot;c9&quot;: &quot;7646&quot;,
+            &quot;c10&quot;: &quot;7930&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;4876&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;ST&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;5561&quot;,
+            &quot;n1_pos&quot;: &quot;C&quot;,
+            &quot;n2&quot;: &quot;6611&quot;,
+            &quot;n2_pos&quot;: &quot;D&quot;,
+            &quot;n3&quot;: &quot;5226&quot;,
+            &quot;n3_pos&quot;: &quot;F&quot;,
+            &quot;n11&quot;: &quot;10&quot;,
+            &quot;n12&quot;: &quot;&quot;,
+            &quot;n13&quot;: &quot;&quot;,
+            &quot;s1&quot;: &quot;9148&quot;,
+            &quot;s2&quot;: &quot;3861&quot;,
+            &quot;s3&quot;: &quot;----&quot;,
+            &quot;s4&quot;: &quot;----&quot;,
+            &quot;s5&quot;: &quot;8905&quot;,
+            &quot;s6&quot;: &quot;----&quot;,
+            &quot;s7&quot;: &quot;9496&quot;,
+            &quot;s8&quot;: &quot;4827&quot;,
+            &quot;s9&quot;: &quot;8155&quot;,
+            &quot;s10&quot;: &quot;2949&quot;,
+            &quot;s11&quot;: &quot;6070&quot;,
+            &quot;s12&quot;: &quot;4258&quot;,
+            &quot;s13&quot;: &quot;4127&quot;,
+            &quot;c1&quot;: &quot;5420&quot;,
+            &quot;c2&quot;: &quot;3861&quot;,
+            &quot;c3&quot;: &quot;----&quot;,
+            &quot;c4&quot;: &quot;----&quot;,
+            &quot;c5&quot;: &quot;8905&quot;,
+            &quot;c6&quot;: &quot;----&quot;,
+            &quot;c7&quot;: &quot;9496&quot;,
+            &quot;c8&quot;: &quot;4827&quot;,
+            &quot;c9&quot;: &quot;8155&quot;,
+            &quot;c10&quot;: &quot;2949&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;5481/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    },
+    {
+        &quot;type&quot;: &quot;STC&quot;,
+        &quot;fdData&quot;: {
+            &quot;n1&quot;: &quot;0394&quot;,
+            &quot;n1_pos&quot;: &quot;&quot;,
+            &quot;n2&quot;: &quot;5562&quot;,
+            &quot;n2_pos&quot;: &quot;&quot;,
+            &quot;n3&quot;: &quot;1732&quot;,
+            &quot;n3_pos&quot;: &quot;&quot;,
+            &quot;n11&quot;: &quot;&quot;,
+            &quot;n12&quot;: &quot;&quot;,
+            &quot;n13&quot;: &quot;&quot;,
+            &quot;s1&quot;: &quot;5277&quot;,
+            &quot;s2&quot;: &quot;3124&quot;,
+            &quot;s3&quot;: &quot;----&quot;,
+            &quot;s4&quot;: &quot;8274&quot;,
+            &quot;s5&quot;: &quot;----&quot;,
+            &quot;s6&quot;: &quot;6522&quot;,
+            &quot;s7&quot;: &quot;7566&quot;,
+            &quot;s8&quot;: &quot;3656&quot;,
+            &quot;s9&quot;: &quot;2138&quot;,
+            &quot;s10&quot;: &quot;0228&quot;,
+            &quot;s11&quot;: &quot;----&quot;,
+            &quot;s12&quot;: &quot;1412&quot;,
+            &quot;s13&quot;: &quot;5118&quot;,
+            &quot;c1&quot;: &quot;6930&quot;,
+            &quot;c2&quot;: &quot;3124&quot;,
+            &quot;c3&quot;: &quot;----&quot;,
+            &quot;c4&quot;: &quot;8274&quot;,
+            &quot;c5&quot;: &quot;----&quot;,
+            &quot;c6&quot;: &quot;6522&quot;,
+            &quot;c7&quot;: &quot;7566&quot;,
+            &quot;c8&quot;: &quot;3656&quot;,
+            &quot;c9&quot;: &quot;2138&quot;,
+            &quot;c10&quot;: &quot;0228&quot;,
+            &quot;dd&quot;: &quot;2022-06-29&quot;,
+            &quot;dn&quot;: &quot;085/22&quot;,
+            &quot;day&quot;: &quot;Wed&quot;,
+            &quot;isLive&quot;: &quot;0&quot;,
+            &quot;isToday&quot;: null,
+            &quot;videoUrl&quot;: &quot;&quot;,
+            &quot;jackpotAmount&quot;: &quot;&quot;,
+            &quot;count&quot;: &quot;23&quot;
+        }
+    }
+]</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-user" hidden>
+<span id="execution-results-GETapi-v1-result--date--" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-user"></span>:
+                id="execution-response-status-GETapi-v1-result--date--"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-user"></code></pre>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-result--date--"></code></pre>
 </span>
-<span id="execution-error-GETapi-user" hidden>
+<span id="execution-error-GETapi-v1-result--date--" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-user"></code></pre>
+    <pre><code id="execution-error-message-GETapi-v1-result--date--"></code></pre>
 </span>
-<form id="form-GETapi-user" data-method="GET"
-      data-path="api/user"
+<form id="form-GETapi-v1-result--date--" data-method="GET"
+      data-path="api/v1/result/{date?}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-result--date--', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-user"
-                    onclick="tryItOut('GETapi-user');">Try it out ⚡
+                    id="btn-tryout-GETapi-v1-result--date--"
+                    onclick="tryItOut('GETapi-v1-result--date--');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-user"
-                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-v1-result--date--"
+                    onclick="cancelTryOut('GETapi-v1-result--date--');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-user" hidden>Send Request 💥
+                    id="btn-executetryout-GETapi-v1-result--date--" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/user</code></b>
+            <b><code>api/v1/result/{date?}</code></b>
         </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>date</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="date"
+               data-endpoint="GETapi-v1-result--date--"
+               value="today"
+               data-component="url" hidden>
+    <br>
+
+            </p>
                     </form>
 
     

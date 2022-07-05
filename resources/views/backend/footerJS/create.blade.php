@@ -313,7 +313,8 @@
                     btn.innerHTML = "x";
                     btn.style.cssText = `
                         position: absolute; 
-                        right: -2px; 
+                        right: -2px;
+                        z-index:5; 
                         top:-10px;
                         color:red;
                         border:none;

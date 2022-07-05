@@ -14,7 +14,7 @@ use Ramsey\Collection\Collection;
 class tblApiController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Api 4D Result.
      * Get a list of 4D Result Site.
      * @urlParam date string required Example:today
      * @Result4DController App\Http\Controllers\Result4DController

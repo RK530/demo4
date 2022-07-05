@@ -6,9 +6,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/user
+    uri: api/create
     metadata:
-      title: ''
+      title: 'Show the form for creating a new resource.'
       description: ''
       authenticated: false
       custom: []
@@ -20,11 +20,161 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: ''
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          access-control-allow-origin: '*'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ink5ZjMzOHhxVGN4SE80N1NzMjlMY0E9PSIsInZhbHVlIjoiVWs3R0lYOW9ORE1RT3U4TytwOE5Fd2EwSExuRjZrWG8wVWE3QTBBb0k2cnJXdi8zSXhjL2ZWeEZEa1ZIaVJRMTErR1VTVURsUUt0UUUzcW8ySTU2SzhzZXFkYi96WlZvSndqbGthb2lkMlM0VHk4V0pqbXg1dVRvZzE0TVM0UEsiLCJtYWMiOiI3M2VmZWQzM2Q0N2VlMzFiMDQyMTRkMzk5NzliZGEyNjhlYzdkYzE4OWVkMTVjZDM1ZjRjZTI3MTY3MTg3OGE0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6Ii9ISTNEZE41SlpTZWlJUUUzUXlpZ0E9PSIsInZhbHVlIjoiV3ZONlo4a2x0YmY2YUJGd2ZpMDBXWFh3RzBRQ1M5bmFza1dDZnRFaE1JUGdFQTlIM2s0OUxleTd3Zkt5bTdtSWFyZHQyM2lhOTV3S1BoaDJlOXA5aFFiK2lhbUZPQy95aDFRQTRLVTRVQi96aDdpajhSU0VQMGFIdFQ0MXQvWGoiLCJtYWMiOiIxZmFjZGM4MmViMTVlM2IwZWIxNmI5MzVmMjg0NWY2NTJkZjZlNmY1ZjlkZmIwYjk1ZWEwNTQ2MGZmNDM1ZTY0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the api.'
+        required: true
+        example: eius
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: ''
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          access-control-allow-origin: '*'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImJCRnFCS01pYlYyaDBrdDNJT2JUNGc9PSIsInZhbHVlIjoia0pTS1hzSHFKRCtzSHZ6aS9sSU5kSnc2OFgwOTdWN3pxZ2FIYU9RdS9adkQ4U3pQd01uRnR4bEhKa3RZeEM0TS94Qm9rOVdYQTJMQzBOU0ZRV2hNSWI2YndvZXRLZG5IZkVrcDd0cW43ZkpmaXdBMGYxVkxsN0FNRnZteVppREMiLCJtYWMiOiI1MjgyODY1NDhjZmFmMTcwZGExNTdkMmMzZjUwNThhM2U5MWQxOGM3ZTkyMTBiODliZGYwOGQzMWQ4NThmNzQ2IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6IlhuUXkrOVVQYWdGSGNRRFJZUmNSenc9PSIsInZhbHVlIjoiVjJ3SFA5UDJCMy9jVGhBaGpNSVQwT2VDRkw3UXZUT1ZOZVdNQmo4WnllMkY1TVA4cUY3dFgwelRxQThVV2l1dnp3V3ZqZ3ZCNi9NQ0EyYVJmYXg2bG01dnA3MC9renB4YnJSVXlJYmtYcGNXc04vWlBvMzk3Wll2NmVZVWJwVjIiLCJtYWMiOiI1ZDJjMTNkZjRhOGVlZWVlMTljMDc1ZDQxOTkzODA0Zjk3MjYwOTNmOTQyYzdjY2RkYmViNDZhMjY0ODk2NGViIiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/{api}/edit'
+    metadata:
+      title: 'Show the form for editing the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      api:
+        name: api
+        description: ''
+        required: true
+        example: quos
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: ''
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          access-control-allow-origin: '*'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlZZZ3E3LzQ3bFNHT2V5SnAyU0lGeHc9PSIsInZhbHVlIjoiQ2hTdjAvMjBVTTF6NVdsNytNNFBhdjJ3Qkp5VEtHZElCcVNRK2M2VUJlVDUzMTBWYmV2cGxHVll4TVlGSm1zTys2N2pJalJ5OTZxeUV3VGswM080ait2RnpHK00rdzJFbXVPZlFLN2p0UFBXNUh6VmxrdG9nV2psNmczRnZpUysiLCJtYWMiOiIwZmMyOWU4NjMzZjIyMTUwMmY0MDc0NmRiM2I0OTMxOTk5MTU5NDZiOTZiZGVjZGE3N2IzODhiZjYyMzE5NjE0IiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; samesite=lax; 4dresult_session=eyJpdiI6IkxTZTY4WnR5dTRRN0hQaE1UZEhXS2c9PSIsInZhbHVlIjoianlDYlVoZlZ1RGFDSGN2bGh6b3VXS3dqbitwanhYa0ozLzlIUlVKMGxUd1Y1ZFVmU1hvVTRhbGdjUk40NThZem9MeW1USDUzL3dxRCtVM0RzTWJmUURRcXc3UHJ2eXg4OEdFMk9HMWJTSTRYOFlISzNKTDQyR21GT3JKMHczbXAiLCJtYWMiOiIxZTNjNjY4ZWM4OTkxMzQyNWY1NzRlNTdkMzc5MjUxOWJiOTlkZGFlODUwZTI2YTgwNDJjM2NmOTdhMjI3MjZjIiwidGFnIjoiIn0%3D; expires=Mon, 04-Jul-2022 04:11:11 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the api.'
+        required: true
+        example: odio
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the api.'
+        required: true
+        example: qui
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/result/{date?}'
+    metadata:
+      title: 'Display a listing of the Api 4D Result.'
+      description: 'Get a list of 4D Result Site.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      date:
+        name: date
+        description: ''
+        required: true
+        example: today
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"type":"H","fdData":{"n1":"9297","n1_pos":"B","n2":"0618","n2_pos":"G","n3":"4820","n3_pos":"K","n11":"297","n12":"618","n13":"820","s1":"1704","s2":"----","s3":"9559","s4":"1408","s5":"2871","s6":"6941","s7":"----","s8":"7487","s9":"6410","s10":"8097","s11":"----","s12":"2520","s13":"9017","c1":"3148","c2":"----","c3":"9559","c4":"1408","c5":"2871","c6":"6941","c7":"----","c8":"7487","c9":"6410","c10":"8097","dd":"2022-06-30","dn":"1442","day":"Thu","isLive":"0","isToday":null,"videoUrl":"https:\/\/www.youtube.com\/embed\/nNkofNyn7wQ?rel=0&hd=1","jackpotAmount":"678,486.00","count":"23"}},{"type":"CS","fdData":{"n1":"6714","n1_pos":"","n2":"2364","n2_pos":"","n3":"3525","n3_pos":"","n11":"714","n12":"364","n13":"525","s1":"9652","s2":"0745","s3":"9554","s4":"2875","s5":"8063","s6":"3731","s7":"2455","s8":"2117","s9":"2685","s10":"6241","s11":"----","s12":"----","s13":"----","c1":"2388","c2":"0745","c3":"9554","c4":"2875","c5":"8063","c6":"3731","c7":"2455","c8":"2117","c9":"2685","c10":"6241","dd":"2022-06-29","dn":"4640\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"EE","fdData":{"n1":"9118","n1_pos":"","n2":"0444","n2_pos":"","n3":"0982","n3_pos":"","n11":"202","n12":"639","n13":"928","s1":"3582","s2":"1752","s3":"----","s4":"8635","s5":"----","s6":"5670","s7":"2099","s8":"5703","s9":"9336","s10":"5883","s11":"3015","s12":"0847","s13":"----","c1":"9511","c2":"1752","c3":"----","c4":"8635","c5":"----","c6":"5670","c7":"2099","c8":"5703","c9":"9336","c10":"5883","dd":"2022-06-29","dn":"3547\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"GD","fdData":{"n1":"2633","n1_pos":"L","n2":"1832","n2_pos":"B","n3":"2433","n3_pos":"K","n11":"","n12":"","n13":"","s1":"1874","s2":"----","s3":"1434","s4":"0431","s5":"3790","s6":"8477","s7":"5772","s8":"5585","s9":"8212","s10":"8079","s11":"----","s12":"----","s13":"4911","c1":"3678","c2":"----","c3":"1434","c4":"0431","c5":"3790","c6":"8477","c7":"5772","c8":"5585","c9":"8212","c10":"8079","dd":"2022-06-29","dn":"2021\/2022","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"M","fdData":{"n1":"4962","n1_pos":"F","n2":"5938","n2_pos":"A","n3":"3800","n3_pos":"M","n11":"","n12":"","n13":"","s1":"----","s2":"6664","s3":"7746","s4":"7275","s5":"8637","s6":"----","s7":"2541","s8":"6872","s9":"6764","s10":"5218","s11":"8635","s12":"4145","s13":"----","c1":"6903","c2":"6664","c3":"7746","c4":"7275","c5":"8637","c6":"----","c7":"2541","c8":"6872","c9":"6764","c10":"5218","dd":"2022-06-29","dn":"717\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"PMP","fdData":{"n1":"2365","n1_pos":"","n2":"3361","n2_pos":"","n3":"4652","n3_pos":"","n11":"365","n12":"361","n13":"652","s1":"4699","s2":"7236","s3":"6686","s4":"3239","s5":"6269","s6":"4674","s7":"1450","s8":"3057","s9":"6371","s10":"1358","s11":"----","s12":"----","s13":"----","c1":"0497","c2":"7236","c3":"6686","c4":"3239","c5":"6269","c6":"4674","c7":"1450","c8":"3057","c9":"6371","c10":"1358","dd":"2022-06-29","dn":"5428\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"SG","fdData":{"n1":"1614","n1_pos":"","n2":"6467","n2_pos":"","n3":"9112","n3_pos":"","n11":"","n12":"","n13":"","s1":"1358","s2":"1368","s3":"1536","s4":"1845","s5":"1868","s6":"2073","s7":"2927","s8":"3969","s9":"7646","s10":"7930","s11":"----","s12":"----","s13":"----","c1":"0423","c2":"1368","c3":"1536","c4":"1845","c5":"1868","c6":"2073","c7":"2927","c8":"3969","c9":"7646","c10":"7930","dd":"2022-06-29","dn":"4876","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"ST","fdData":{"n1":"5561","n1_pos":"C","n2":"6611","n2_pos":"D","n3":"5226","n3_pos":"F","n11":"10","n12":"","n13":"","s1":"9148","s2":"3861","s3":"----","s4":"----","s5":"8905","s6":"----","s7":"9496","s8":"4827","s9":"8155","s10":"2949","s11":"6070","s12":"4258","s13":"4127","c1":"5420","c2":"3861","c3":"----","c4":"----","c5":"8905","c6":"----","c7":"9496","c8":"4827","c9":"8155","c10":"2949","dd":"2022-06-29","dn":"5481\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}},{"type":"STC","fdData":{"n1":"0394","n1_pos":"","n2":"5562","n2_pos":"","n3":"1732","n3_pos":"","n11":"","n12":"","n13":"","s1":"5277","s2":"3124","s3":"----","s4":"8274","s5":"----","s6":"6522","s7":"7566","s8":"3656","s9":"2138","s10":"0228","s11":"----","s12":"1412","s13":"5118","c1":"6930","c2":"3124","c3":"----","c4":"8274","c5":"----","c6":"6522","c7":"7566","c8":"3656","c9":"2138","c10":"0228","dd":"2022-06-29","dn":"085\/22","day":"Wed","isLive":"0","isToday":null,"videoUrl":"","jackpotAmount":"","count":"23"}}]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
     responseFields: []

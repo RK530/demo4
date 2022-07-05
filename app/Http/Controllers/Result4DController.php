@@ -345,8 +345,9 @@ class Result4DController extends Controller
         $keys=array_keys($count);
         $v=array_values($count);
         for($i=0;$i<count($count);$i++){
-                $c[]= $keys[$i].' : '.$v[$i].'<br />';
+                $c[]= $keys[$i].' : '.$v[$i].'<br>';
         }
+        //return  $keys=implode('<br>',$keys);
         $c=json_encode($count);
 
       // return response()->json($count);
@@ -524,18 +525,34 @@ class Result4DController extends Controller
             //$collect=json_encode($collect);
         for ($i=0;$i<count($collect);$i++){
             if($collect[$i]['Prize']=='1st' OR $collect[$i]['Prize']=='2nd' OR $collect[$i]['Prize']=='3rd'){
+                $Ttype[]=$collect[$i]['type'];
                 $top++;
             }elseif ($collect[$i]['Prize']=='s1' OR $collect[$i]['Prize']=='s2' OR $collect[$i]['Prize']=='s3' OR $collect[$i]['Prize']=='s4' OR $collect[$i]['Prize']=='s5' OR $collect[$i]['Prize']=='s6' OR $collect[$i]['Prize']=='s7' OR $collect[$i]['Prize']=='s8' OR $collect[$i]['Prize']=='s9'
                 OR $collect[$i]['Prize']=='s10' OR $collect[$i]['Prize']=='s11' OR $collect[$i]['Prize']=='12' OR $collect[$i]['Prize']=='s13'){
+                $Stype[]=$collect[$i]['type'];
                 $special++;
             }elseif ($collect[$i]['Prize']=='c1'OR $collect[$i]['Prize']=='c2' OR $collect[$i]['Prize']=='c3' OR $collect[$i]['Prize']=='c4' OR $collect[$i]['Prize']=='c5' OR $collect[$i]['Prize']=='c6' OR $collect[$i]['Prize']=='c7' OR $collect[$i]['Prize']=='c8' OR $collect[$i]['Prize']=='c9'
                 OR $collect[$i]['Prize']=='c10'){
+                $Ctype[]=$collect[$i]['type'];
                 $consolation++;
             }
         }
+        $cc1='';
+        $cc2='';
+        $cc3='';
+       if($top>0){
+        $cc1=array_count_values($Ttype);
+        $cc1=json_encode($Ttype);
+       }if($special>0){
+        $cc2=array_count_values($Stype);
+        $cc2=json_encode($Stype);
+       }if($consolation>0){
+        $cc3=array_count_values($Ctype);
+        $cc3=json_encode($Ctype);
+       }
             $collect=implode('<br>',$collect);
-        return $number.'<br>'.'history of have been come out :'. $c.'<br>'.'Total out : '.count($findNumber).'<br>'.'Top prize total come out: '.$top .'<br>'.
-            'Special prize : '.$special.'<br>'.'Consolation prize : '.$consolation.'<br>'.$collect;
+        return $number.'<br>'.'history of have been come out :'. $c.'<br>'.'Total out : '.count($findNumber).'<br>'.'Top prize total come out: '.$top .'  '.$cc1.'<br>'.
+            'Special prize : '.$special.' '.$cc2.'<br>'.'Consolation prize : '.$consolation.' '.$cc3.'<br>'.$collect;
 
         //return 'Type : '.$type.'<br>'.'Top prize : '.$count.'<br>'.'Special : '.$special.'<br>'.'Consolation : '.$consolation;
 
