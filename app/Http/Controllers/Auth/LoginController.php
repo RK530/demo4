@@ -56,6 +56,10 @@ class LoginController extends Controller
     {
         return 'name';
     }
+    public function password()
+    {
+        return 'password';
+    }
     protected function  authenticated(Request $request, $user){
         //return Carbon::now()->toDateTimeString();
 
