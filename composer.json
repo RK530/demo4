@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
+        "algolia/algoliasearch-client-php": "^3.2",
         "davejamesmiller/laravel-breadcrumbs": "5.x",
         "diglactic/laravel-breadcrumbs": "6.1",
         "fideloper/proxy": "^4.2",
@@ -21,7 +22,6 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.4",
         "realrashid/sweet-alert": "^5.1"
-    
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
