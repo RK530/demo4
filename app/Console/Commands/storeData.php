@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\tbl4DResult;
 use App\Models\tblSpecial;
 use App\Models\tblTotoSite;
+use App\Models\tblResultGen;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;

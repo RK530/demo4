@@ -3,6 +3,8 @@
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
+use App\Console\Commands\storeData;
+use App\Models\tblResultGen;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
@@ -14,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        
     ];
 
     /**
@@ -24,7 +27,14 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        
+        $lastData = tblResultGen::latest()->first();
+        if(!empty($lastData)){
+            $date = new Carbon($lastData->dd);
+        }else{
+            $date = '1985-04-27';
+        }
+
+        $schedule->command(storeData::class, [$date])->everyMinute();
     }
 
     /**
